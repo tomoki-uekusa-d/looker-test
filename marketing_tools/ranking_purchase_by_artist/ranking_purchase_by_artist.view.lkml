@@ -9,7 +9,6 @@ view: ranking_purchase_by_artist {
     type: string
     sql: ${TABLE}.content_id ;;
   }
-
   dimension_group: process_date {
     description: "対象年月日"
     label: "対象年月日"
