@@ -4,17 +4,17 @@ view: dim_material_for_test {
   suggestions: yes
 
   # dimensins
-  dimension: content_id {
+  dimension: material_id {
     description: "コンテンツID"
     label: "コンテンツID"
     type: string
-    sql: MAX(${TABLE}.content_id) ;;
+    sql: MAX(${TABLE}.material_id) ;;
   }
-  dimension: content_name {
+  dimension: material_name {
     description: "コンテンツ名"
     label: "コンテンツ名"
     type: string
-    sql: MAX(${TABLE}.content_name) ;;
+    sql: MAX(${TABLE}.material_name) ;;
   }
   dimension: music_id {
     description: "music_id"
