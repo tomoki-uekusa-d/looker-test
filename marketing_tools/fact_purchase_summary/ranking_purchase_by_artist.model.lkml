@@ -19,3 +19,5 @@ include: "*.view.lkml"
 # }
 
 explore: ranking_purchase_by_artist_for_test {}
+explore: dim_material_for_test {}
+explore: dim_expression_for_test {}
