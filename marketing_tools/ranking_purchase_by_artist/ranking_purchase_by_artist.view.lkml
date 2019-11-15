@@ -1,4 +1,4 @@
-view: ranking_purchase_by_artist {
+view: ranking_purchase_by_artist_for_test {
   sql_table_name: tableau_tool.fact_purchase_summary ;;
 
   suggestions: yes

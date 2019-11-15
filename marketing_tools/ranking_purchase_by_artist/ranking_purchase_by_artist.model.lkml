@@ -18,4 +18,4 @@ include: "*.view.lkml"
 #   }
 # }
 
-explore: ranking_purchase_by_artist {}
+explore: ranking_purchase_by_artist_for_test {}
