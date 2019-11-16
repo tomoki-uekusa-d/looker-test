@@ -102,7 +102,7 @@ view: ranking_purchase_by_artist_for_test {
     description: "購入数順位"
     label: "購入数順位"
     type: number
-    sql: RANK_UNIQUE(SUM(${total_purchase})) ;;
+    sql: ROW_NUMBER() OVER(ORDER BY ${total_sells} DESC) ;;
   }
   #############################################
   # measure: total_sells {
