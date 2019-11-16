@@ -14,7 +14,7 @@ view: dim_material_for_test {
   dimension: material_id {
     description: "マテリアルID"
     label: "マテリアルID"
-    type: string
+    type: number
     hidden: yes
     sql: ${TABLE}.material_id ;;
   }
