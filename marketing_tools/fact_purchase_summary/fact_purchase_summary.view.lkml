@@ -12,10 +12,10 @@ view: fact_purchase_summary_for_test {
   #   sql: ${TABLE}.material_name ;;
   # }
   measure: content_id {
-    description: "コンテンツID"
-    label: "コンテンツID"
+    description: "コンテンツ名"
+    label: "コンテンツ名"
     type: string
-    sql: MAX(${TABLE}.material_id)
+    sql: MAX(${TABLE}.material_id) ;;
   }
 
   #############################################
