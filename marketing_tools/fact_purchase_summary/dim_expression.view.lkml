@@ -8,24 +8,28 @@ view: dim_expression_for_test {
     description: "measure"
     label: "measure"
     type: string
+    hidden: yes
     sql: ${TABLE}.measure ;;
   }
   dimension: property {
     description: "property"
     label: "property"
     type: string
+    hidden: yes
     sql: ${TABLE}.property ;;
   }
   dimension: key {
     description: "key"
     label: "key"
     type: string
+    hidden: yes
     sql: ${TABLE}.key ;;
   }
   dimension: project {
     description: "project"
     label: "project"
     type: string
+    hidden: yes
     sql: ${TABLE}.project ;;
   }
 }
