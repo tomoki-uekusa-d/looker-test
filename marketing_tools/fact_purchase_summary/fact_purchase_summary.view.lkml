@@ -1,4 +1,4 @@
-include: 'dim_material.view.lkml'
+include: "dim_material.view.lkml"
 
 view: fact_purchase_summary_for_test {
   extends: [dim_material]
@@ -9,8 +9,9 @@ view: fact_purchase_summary_for_test {
     description: "コンテンツID"
     label: "コンテンツID"
     type: string
-    sql: dim_material.material_name
+    sql: dim_material.material_name ;;
   }
+
   #############################################
   # dimension: content_id {
   #   description: "コンテンツID"
