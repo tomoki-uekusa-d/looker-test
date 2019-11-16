@@ -45,7 +45,7 @@ explore: ranking_purchase_by_artist_for_test {
     from: dim_expression_for_test
     sql_on:
       ${ranking_purchase_by_artist_for_test.project} = ${dim_exp_4.project} AND
-      CAST(${ranking_purchase_by_artist_for_test.payment_method_id AS VARCHAR}) = ${dim_exp_4.key} AND
+      CAST(${ranking_purchase_by_artist_for_test.payment_method_id} AS VARCHAR) = ${dim_exp_4.key} AND
       ${dim_exp_4.measure} = 'payment_method_id' AND
       ${dim_exp_4.property} = 'name'
       ;;
