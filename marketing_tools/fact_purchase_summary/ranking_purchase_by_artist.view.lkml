@@ -1,7 +1,4 @@
-include: "fact_purchase_summary.view.lkml"
-
 view: ranking_purchase_by_artist_for_test {
-  extends: [fact_purchase_summary_for_test]
   suggestions: yes
 
   # dimensions
@@ -9,15 +6,15 @@ view: ranking_purchase_by_artist_for_test {
     description: "コンテンツ名"
     label: "コンテンツ名"
     hidden: no
-    sql: ${TABLE}.material_name ;;
+    sql: ${dim_material_for_test.material_id} ;;
   }
   #############################################
-  dimension: content_id {
-    description: "コンテンツID"
-    label: "コンテンツID"
-    hidden: no
-    sql: ${TABLE}.material_id ;;
-  }
+  # dimension: content_id {
+  #   description: "コンテンツID"
+  #   label: "コンテンツID"
+  #   hidden: no
+  #   sql: ${TABLE}.material_id ;;
+  # }
   # dimension: content_name {
   #   description: "コンテンツ名"
   #   label: "コンテンツ名"
