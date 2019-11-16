@@ -12,10 +12,9 @@ explore: ranking_purchase_by_artist_for_test {
     relationship: one_to_many
   }
   join: dim_expression_for_test {
-    from: e1
     sql_on:
       ${ranking_purchase_by_artist_for_test.project} = ${dim_expression_for_test.project} AND
-      ${dim_material_for_test.file_type_id} = ${dim_expression.key} AND
+      ${dim_material_for_test.file_type_id} = ${dim_expression_for_test.key} AND
       ${dim_expression_for_test.measure} = 'file_type_id' AND
       ${dim_expression_for_test.property} = 'name' AND
       ;;
