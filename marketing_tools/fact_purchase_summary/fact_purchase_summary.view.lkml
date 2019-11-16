@@ -11,10 +11,9 @@ view: fact_purchase_summary_for_test {
     sql: ${TABLE}.purchase_summary_key ;;
   }
   dimension: project {
-    description: "project"
-    label: "project"
+    description: "プロジェクト"
+    label: "プロジェクト"
     type: string
-    hidden: yes
     sql: ${TABLE}.project ;;
   }
   dimension: site_id {
@@ -92,7 +91,6 @@ view: fact_purchase_summary_for_test {
     description: "data_source"
     label: "data_source"
     type: string
-    hidden: yes
     sql: ${TABLE}.data_source ;;
   }
   dimension: process_date {
