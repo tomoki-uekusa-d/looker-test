@@ -25,6 +25,13 @@ view: dim_expression_for_test {
     hidden: yes
     sql: ${TABLE}.key ;;
   }
+  dimension: value {
+    description: "value"
+    label: "value"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.value ;;
+  }
   dimension: project {
     description: "project"
     label: "project"
