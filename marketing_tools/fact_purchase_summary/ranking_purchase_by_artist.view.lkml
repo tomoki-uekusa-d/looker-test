@@ -1,8 +1,8 @@
-# include: "dim_material.view.lkml"
-# include: "fact_purchase_summary.view.lkml"
-#
+include: "dim_material.view.lkml"
+include: "fact_purchase_summary.view.lkml"
+
 view: ranking_purchase_by_artist_for_test {
-  # extends: [dim_material_for_test, fact_purchase_summary_for_test]
+  extends: [dim_material_for_test, fact_purchase_summary_for_test]
   suggestions: yes
 
   # dimensions
