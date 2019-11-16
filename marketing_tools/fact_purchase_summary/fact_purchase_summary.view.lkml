@@ -36,9 +36,7 @@ view: fact_purchase_summary_for_test {
     sql: ${TABLE}.payment_method_id ;;
   }
   dimension: point_consumed {
-    description:
-      消費ポイント数 ※ 詳細は不明
-      ;;
+    description: "消費ポイント数"
     label: "point_consumed"
     type: number
     sql: ${TABLE}.point_consumed ;;
@@ -56,9 +54,7 @@ view: fact_purchase_summary_for_test {
     sql: ${TABLE}.amount_paid_with_tax ;;
   }
   dimension: purchase_unit {
-    description:
-      購入単位ID ※ 詳細は不明
-    ;;
+    description: "購入単位ID"
     label: "購入単位ID"
     type: number
     hidden: yes
