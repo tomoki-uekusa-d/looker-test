@@ -31,13 +31,13 @@ view: dim_material_for_test {
   dimension: music_id {
     description: "楽曲ID"
     label: "楽曲ID"
-    type: bigint
+    type: number
     sql: ${TABLE}.music_id ;;
   }
   dimension: artist_id {
     description: "アーティストID"
     label: "アーティストID"
-    type: bigint
+    type: number
     sql: ${TABLE}.artist_id ;;
   }
   dimension: artist_name {
