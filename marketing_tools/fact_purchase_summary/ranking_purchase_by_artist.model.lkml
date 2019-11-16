@@ -17,7 +17,7 @@ explore: ranking_purchase_by_artist_for_test {
       ${ranking_purchase_by_artist_for_test.project} = ${dim_exp_1.project} AND
       ${dim_material_for_test.file_type_id} = ${dim_exp_1.key} AND
       ${dim_exp_1.measure} = 'file_type_id' AND
-      ${dim_exp_1.property} = 'name' AND
+      ${dim_exp_1.property} = 'name'
       ;;
     relationship: one_to_many
   }
