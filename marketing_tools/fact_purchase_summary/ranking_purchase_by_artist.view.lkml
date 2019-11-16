@@ -62,6 +62,12 @@ view: ranking_purchase_by_artist_for_test {
   }
 
   # measures
+  measure: first_purchase_within_1_day_after_subscription {
+    description: "入会後初回購入[24時間以内]"
+    label: "入会後初回購入[24時間以内]"
+    type: sum
+    sql: CASE WHEN ${TABLE}.measure = 'first_purchase_within_1_day_after_subscription' THEN ${TABLE}.value ELSE 0 END
+  }
   #############################################
   # measure: total_sells {
   #   description: "購入数"

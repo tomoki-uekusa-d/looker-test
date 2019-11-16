@@ -37,7 +37,7 @@ view: fact_purchase_summary_for_test {
   }
   dimension: point_consumed {
     description: "消費ポイント数"
-    label: "point_consumed"
+    label: "消費ポイント数"
     type: number
     sql: ${TABLE}.point_consumed ;;
   }
