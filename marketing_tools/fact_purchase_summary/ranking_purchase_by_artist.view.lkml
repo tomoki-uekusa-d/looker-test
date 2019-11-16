@@ -20,6 +20,16 @@ view: ranking_purchase_by_artist_for_test {
     label: "サイト名"
     sql: ${dim_exp_2.value} ;;
   }
+  dimension: site_category_name {
+    description: "サイトカテゴリ名"
+    label: "サイトカテゴリ名"
+    sql: ${dim_exp_3.value} ;;
+  }
+  dimension: payment_method_name {
+    description: "決済方法"
+    label: "決済方法"
+    sql: ${dim_exp_4.value} ;;
+  }
   #############################################
   dimension: content_id {
     description: "コンテンツID"
