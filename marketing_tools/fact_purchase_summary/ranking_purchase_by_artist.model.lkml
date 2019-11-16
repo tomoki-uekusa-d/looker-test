@@ -20,7 +20,7 @@ include: "*.view.lkml"
 
 explore: ranking_purchase_by_artist_for_test {
   join: dim_material_for_test {
-      sql_on: ${ranking_purchase_by_artist_for_test.content_id} = ${dim_material.content_id} ;;
+      sql_on: ${ranking_purchase_by_artist_for_test.content_id} = ${dim_material.material_id} ;;
       relationship: one_to_many
     }
 }
