@@ -9,7 +9,7 @@ view: ranking_purchase_by_artist_for_test {
     description: "コンテンツ名"
     label: "コンテンツ名"
     hidden: no
-    sql: ${dim_material_for_test.material_id} ;;
+    sql: ${dim_material_for_test.material_name} ;;
   }
   #############################################
   dimension: content_id {
