@@ -15,6 +15,11 @@ view: ranking_purchase_by_artist_for_test {
     label: "ファイルタイプ名"
     sql: ${dim_exp_1.value} ;;
   }
+  dimension: site_name {
+    description: "サイト名"
+    label: "サイト名"
+    sql: ${dim_exp_2.value} ;;
+  }
   #############################################
   dimension: content_id {
     description: "コンテンツID"
