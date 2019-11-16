@@ -1,7 +1,7 @@
 view: dim_material_for_test {
   sql_table_name: tableau_tool.dim_material ;;
 
-  suggestions: yes
+  suggestions: no
 
   # dimensins
   dimension: material_key {
