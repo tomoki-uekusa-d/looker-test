@@ -1,5 +1,5 @@
 view: dim_expression_for_test {
-  sql_table_name: tableau_tool.dim_material ;;
+  sql_table_name: tableau_tool.dim_expression ;;
 
   suggestions: yes
 
