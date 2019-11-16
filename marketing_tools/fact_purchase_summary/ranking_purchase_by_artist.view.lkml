@@ -5,13 +5,6 @@ view: ranking_purchase_by_artist_for_test {
   suggestions: yes
 
   # dimensions
-  dimension: rank_total_ranking {
-    primary_key: yes
-    description: "購入数順位"
-    label: "購入数順位"
-    type: number
-    sql: RANK_UNIQUE(SUM(${total_purchase}))
-  }
   dimension: payment_method_id {
     description: "payment_method_id"
     label: "payment_method_id"
@@ -69,11 +62,48 @@ view: ranking_purchase_by_artist_for_test {
   }
 
   # measures
+  measure: first_purchase_within_1_day_after_subscription {
+    description: "入会後初回購入[24時間以内]"
+    label: "入会後初回購入[24時間以内]"
+    type: sum
+    sql: CASE WHEN ${TABLE}.measure = 'first_purchase_within_1_day_after_subscription' THEN ${TABLE}.value ELSE 0 END ;;
+  }
+  measure: purchase_sales_payment {
+    description: "売上[個別課金]"
+    label: "売上[個別課金]"
+    type: sum
+    sql: CASE WHEN ${TABLE}.measure = 'purchase_sales[payment]' THEN ${TABLE}.value ELSE 0 END ;;
+  }
+  measure: purchase_sales_point {
+    description: "売上[ポイント消費]"
+    label: "売上[ポイント消費]"
+    type: sum
+    sql: CASE WHEN ${TABLE}.measure = 'purchase_sales[payment]' THEN ${TABLE}.value ELSE 0 END ;;
+  }
+  measure: purchase_payment {
+    description: "購入数[個別課金]"
+    label: "購入数[個別課金]"
+    type: sum
+    sql: CASE WHEN ${TABLE}.measure = 'purchase[payment]' THEN ${TABLE}.value ELSE 0 END ;;
+  }
+  measure: purchase_point {
+    description: "購入数[ポイント消費]"
+    label: "購入数[ポイント消費]"
+    type: sum
+    sql: CASE WHEN ${TABLE}.measure = 'purchase[payment]' THEN ${TABLE}.value ELSE 0 END ;;
+  }
   measure: total_purchase {
     description: "購入数"
     label: "購入数"
     type: number
     sql: ${purchase_point} + ${purchase_payment} ;;
+  }
+  measure: rank_total_ranking {
+    primary_key: yes
+    description: "購入数順位"
+    label: "購入数順位"
+    type: number
+    sql: RANK_UNIQUE(SUM(${total_purchase}))
   }
   #############################################
   # measure: total_sells {
