@@ -3,6 +3,7 @@ include: "dim_material.view.lkml"
 view: fact_purchase_summary_for_test {
   extends: [dim_material_for_test]
   suggestions: yes
+  hidden: no
 
   # dimensions
   dimension: content_id {
