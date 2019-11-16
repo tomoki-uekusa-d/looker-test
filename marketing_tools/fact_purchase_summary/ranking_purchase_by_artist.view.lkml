@@ -5,10 +5,40 @@ view: ranking_purchase_by_artist_for_test {
   suggestions: yes
 
   # dimensions
+  dimension: payment_method_id {
+    description: "payment_method_id"
+    label: "payment_method_id"
+    sql: ${TABLE}.payment_method_id ;;
+  }
   dimension: content_name {
     description: "コンテンツ名"
     label: "コンテンツ名"
-    sql: ${dim_material_for_test.material_name} ;;
+    sql: MAX(${dim_material_for_test.material_name}) ;;
+  }
+  dimension: file_type_id {
+    description: "ファイルタイプID"
+    label: "ファイルタイプID"
+    sql: MAX(${dim_material_for_test.file_type_id}) ;;
+  }
+  dimension: display_type_id {
+    description: "ディスプレイタイプID"
+    label: "ディスプレイタイプID"
+    sql: MAX(${dim_material_for_test.display_type_id}) ;;
+  }
+  dimension: product_id {
+    description: "楽曲ID"
+    label: "楽曲ID"
+    sql: MAX(${dim_material_for_test.music_id}) ;;
+  }
+  dimension: artist_id {
+    description: "アーティストID"
+    label: "アーティストID"
+    sql: MAX(${dim_material_for_test.artist_id}) ;;
+  }
+  dimension: artist_name {
+    description: "アーティスト名"
+    label: "アーティスト名"
+    sql: MAX(${dim_material_for_test.artist_name}) ;;
   }
   dimension: file_type_name {
     description: "ファイルタイプ名"
@@ -30,49 +60,6 @@ view: ranking_purchase_by_artist_for_test {
     label: "決済方法"
     sql: ${dim_exp_4.value} ;;
   }
-  #############################################
-  dimension: content_id {
-    description: "コンテンツID"
-    label: "コンテンツID"
-    sql: ${TABLE}.content_id;;
-  }
-  # dimension: content_name {
-  #   description: "コンテンツ名"
-  #   label: "コンテンツ名"
-  #   hidden: no
-  #   sql: MAX(${TABLE}.material_name) ;;
-  # }
-  # dimension: artist_id {
-  #   description: "アーティストID"
-  #   label: "アーティストID"
-  #   hidden: no
-  #   sql: MAX(${TABLE}.artist_id) ;;
-  # }
-  # dimension: artist_name {
-  #   description: "アーティスト名"
-  #   label: "アーティスト名"
-  #   hidden: no
-  #   sql: MAX(${TABLE}.artist_name) ;;
-  # }
-  # dimension: music_name {
-  #   description: "アーティスト名"
-  #   label: "アーティスト名"
-  #   hidden: no
-  #   sql: MAX(${TABLE}.artist_name) ;;
-  # }
-  # dimension: file_type_id {
-  #   description: "ファイルタイプID"
-  #   label: "ファイルタイプID"
-  #   hidden: no
-  #   sql: MAX(${TABLE}.file_type_id) ;;
-  # }
-  # dimension: display_type_id {
-  #   description: "ディスプレイタイプID"
-  #   label: "ディスプレイタイプID"
-  #   hidden: no
-  #   sql: MAX(${TABLE}.display_type_id) ;;
-  # }
-  #############################################
 
   # measures
   #############################################

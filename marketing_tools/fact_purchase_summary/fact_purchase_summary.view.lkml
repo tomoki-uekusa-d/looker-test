@@ -18,50 +18,48 @@ view: fact_purchase_summary_for_test {
     sql: ${TABLE}.project ;;
   }
   dimension: site_id {
-    description: "site_id"
-    label: "site_id"
+    description: "サイトID"
+    label: "サイトID"
     type: string
-    hidden: yes
     sql: ${TABLE}.site_id ;;
   }
   dimension: content_id {
-    description: "content_id"
-    label: "content_id"
+    description: "コンテンツID"
+    label: "コンテンツID"
     type: string
-    hidden: yes
     sql: ${TABLE}.content_id ;;
   }
   dimension: payment_method_id {
     description: "payment_method_id"
     label: "payment_method_id"
     type: number
-    hidden: yes
     sql: ${TABLE}.payment_method_id ;;
   }
   dimension: point_consumed {
-    description: "point_consumed"
+    description:
+      消費ポイント数 ※ 詳細は不明
+      ;;
     label: "point_consumed"
     type: number
-    hidden: yes
     sql: ${TABLE}.point_consumed ;;
   }
   dimension: amount_paid {
-    description: "amount_paid"
-    label: "amount_paid"
+    description: "消費金額"
+    label: "消費金額"
     type: number
-    hidden: yes
     sql: ${TABLE}.amount_paid ;;
   }
   dimension: amount_paid_with_tax {
-    description: "amount_paid_with_tax"
-    label: "amount_paid_with_tax"
+    description: "消費金額(税込み)"
+    label: "消費金額(税込み)"
     type: number
-    hidden: yes
     sql: ${TABLE}.amount_paid_with_tax ;;
   }
   dimension: purchase_unit {
-    description: "purchase_unit"
-    label: "purchase_unit"
+    description:
+      購入単位ID ※ 詳細は不明
+    ;;
+    label: "購入単位ID"
     type: number
     hidden: yes
     sql: ${TABLE}.purchase_unit ;;
