@@ -11,7 +11,8 @@ explore: ranking_purchase_by_artist_for_test {
     type: inner
     relationship: one_to_many
   }
-  join: dim_expression_for_test {
+  join: dim_exp_1 {
+    from: dim_expression_for_test
     sql_on:
       ${ranking_purchase_by_artist_for_test.project} = ${dim_expression_for_test.project} AND
       ${dim_material_for_test.file_type_id} = ${dim_expression_for_test.key} AND

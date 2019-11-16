@@ -8,14 +8,17 @@ view: ranking_purchase_by_artist_for_test {
   dimension: content_name {
     description: "コンテンツ名"
     label: "コンテンツ名"
-    hidden: no
     sql: ${dim_material_for_test.material_name} ;;
+  }
+  dimension: file_type_name {
+    description: "ファイルタイプ名"
+    label: "ファイルタイプ名"
+    sql: ${dim_exp_1.value} ;;
   }
   #############################################
   dimension: content_id {
     description: "コンテンツID"
     label: "コンテンツID"
-    hidden: no
     sql: ${TABLE}.content_id;;
   }
   # dimension: content_name {
