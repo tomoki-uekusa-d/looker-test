@@ -8,15 +8,39 @@ view: fact_purchase_summary_for_test {
   dimension: content_id {
     description: "コンテンツID"
     label: "コンテンツID"
-    type: string
+    sql: ${TABLE}.content_id ;;
+  }
+  dimension: content_name {
+    description: "コンテンツ名"
+    label: "コンテンツ名"
     sql: MAX(${TABLE}.material_name) ;;
   }
-  # measure: content_id {
-  #   description: "コンテンツiD"
-  #   label: "コンテンツID"
-  #   type: string
-  #   sql: MAX(${TABLE}.material_id) ;;
-  # }
+  dimension: artist_id {
+    description: "アーティストID"
+    label: "アーティストID"
+    sql: MAX(${TABLE}.artist_id) ;;
+  }
+  dimension: artist_name {
+    description: "アーティスト名"
+    label: "アーティスト名"
+    sql: MAX(${TABLE}.artist_name) ;;
+  }
+  dimension: music_name {
+    description: "アーティスト名"
+    label: "アーティスト名"
+    sql: MAX(${TABLE}.artist_name) ;;
+  }
+  dimension: file_type_id {
+    description: "ファイルタイプID"
+    label: "ファイルタイプID"
+    sql: MAX(${TABLE}.file_type_id) ;;
+  }
+  dimension: display_type_id {
+    description: "ファイルタイプID"
+    label: "ファイルタイプID"
+    sql: MAX(${TABLE}.file_type_id) ;;
+  }
+
 
   #############################################
   # dimension: content_id {
