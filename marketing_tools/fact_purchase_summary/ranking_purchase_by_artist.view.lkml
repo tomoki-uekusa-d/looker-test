@@ -60,6 +60,13 @@ view: ranking_purchase_by_artist_for_test {
     label: "決済方法"
     sql: ${dim_exp_4.value} ;;
   }
+  dimension_group: process_date {
+    description: "対象年月日"
+    label: "対象年月日"
+    type: time
+    timeframes: [date]
+    sql: date_parse(${TABLE}.process_date,'%Y-%m-%d') ;;
+  }
 
   # measures
   measure: first_purchase_within_1_day_after_subscription {
