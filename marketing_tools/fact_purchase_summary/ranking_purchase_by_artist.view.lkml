@@ -13,32 +13,32 @@ view: ranking_purchase_by_artist_for_test {
   dimension: content_name {
     description: "コンテンツ名"
     label: "コンテンツ名"
-    sql: MAX(${dim_material_for_test.material_name}) ;;
+    sql: ${dim_material_for_test.material_name} ;;
   }
   dimension: file_type_id {
     description: "ファイルタイプID"
     label: "ファイルタイプID"
-    sql: MAX(${dim_material_for_test.file_type_id}) ;;
+    sql: ${dim_material_for_test.file_type_id} ;;
   }
   dimension: display_type_id {
     description: "ディスプレイタイプID"
     label: "ディスプレイタイプID"
-    sql: MAX(${dim_material_for_test.display_type_id}) ;;
+    sql: ${dim_material_for_test.display_type_id} ;;
   }
   dimension: product_id {
     description: "楽曲ID"
     label: "楽曲ID"
-    sql: MAX(${dim_material_for_test.music_id}) ;;
+    sql: ${dim_material_for_test.music_id} ;;
   }
   dimension: artist_id {
     description: "アーティストID"
     label: "アーティストID"
-    sql: MAX(${dim_material_for_test.artist_id}) ;;
+    sql: ${dim_material_for_test.artist_id} ;;
   }
   dimension: artist_name {
     description: "アーティスト名"
     label: "アーティスト名"
-    sql: MAX(${dim_material_for_test.artist_name}) ;;
+    sql: ${dim_material_for_test.artist_name} ;;
   }
   dimension: file_type_name {
     description: "ファイルタイプ名"
