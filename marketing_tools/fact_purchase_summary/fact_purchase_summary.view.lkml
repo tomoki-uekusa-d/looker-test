@@ -3,42 +3,48 @@ include: "dim_material.view.lkml"
 view: fact_purchase_summary_for_test {
   extends: [dim_material_for_test]
   suggestions: yes
-  hidden: no
 
   # dimensions
   dimension: content_id {
     description: "コンテンツID"
     label: "コンテンツID"
+    hidden: no
     sql: ${TABLE}.material_id ;;
   }
   dimension: content_name {
     description: "コンテンツ名"
     label: "コンテンツ名"
+    hidden: no
     sql: MAX(${TABLE}.material_name) ;;
   }
   dimension: artist_id {
     description: "アーティストID"
     label: "アーティストID"
+    hidden: no
     sql: MAX(${TABLE}.artist_id) ;;
   }
   dimension: artist_name {
     description: "アーティスト名"
     label: "アーティスト名"
+    hidden: no
     sql: MAX(${TABLE}.artist_name) ;;
   }
   dimension: music_name {
     description: "アーティスト名"
     label: "アーティスト名"
+    hidden: no
     sql: MAX(${TABLE}.artist_name) ;;
   }
   dimension: file_type_id {
     description: "ファイルタイプID"
     label: "ファイルタイプID"
+    hidden: no
     sql: MAX(${TABLE}.file_type_id) ;;
   }
   dimension: display_type_id {
     description: "ディスプレイタイプID"
     label: "ディスプレイタイプID"
+    hidden: no
     sql: MAX(${TABLE}.display_type_id) ;;
   }
 
