@@ -18,6 +18,11 @@ include: "*.view.lkml"
 #   }
 # }
 
+explore: ranking_purchase_by_artist_for_test {
+  join: dim_material {
+      sql_on: ${ranking_purchase_by_artist_for_test.content_id} = ${dim_material.content_id}
+    }
+}
 explore: fact_purchase_summary_for_test {}
 explore: dim_material_for_test {}
 explore: dim_expression_for_test {}

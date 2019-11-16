@@ -1,51 +1,112 @@
-include: "dim_material.view.lkml"
-
 view: fact_purchase_summary_for_test {
-  extends: [dim_material_for_test]
+  sql_table_name: tableau_tool.fact_purchase_summary ;;
   suggestions: yes
 
   # dimensions
+  dimension: purchase_summary_key {
+    description: "purchase_summary_key"
+    label: "purchase_summary_key"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.purchase_summary_key ;;
+  }
+  dimension: project {
+    description: "project"
+    label: "project"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.project ;;
+  }
+  dimension: site_id {
+    description: "site_id"
+    label: "site_id"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.site_id ;;
+  }
   dimension: content_id {
-    description: "コンテンツID"
-    label: "コンテンツID"
-    hidden: no
-    sql: ${TABLE}.material_id ;;
+    description: "content_id"
+    label: "content_id"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.content_id ;;
   }
-  dimension: content_name {
-    description: "コンテンツ名"
-    label: "コンテンツ名"
-    hidden: no
-    sql: MAX(${TABLE}.material_name) ;;
+  dimension: payment_method_id {
+    description: "payment_method_id"
+    label: "payment_method_id"
+    type: number
+    hidden: yes
+    sql: ${TABLE}.payment_method_id ;;
   }
-  dimension: artist_id {
-    description: "アーティストID"
-    label: "アーティストID"
-    hidden: no
-    sql: MAX(${TABLE}.artist_id) ;;
+  dimension: point_consumed {
+    description: "point_consumed"
+    label: "point_consumed"
+    type: number
+    hidden: yes
+    sql: ${TABLE}.point_consumed ;;
   }
-  dimension: artist_name {
-    description: "アーティスト名"
-    label: "アーティスト名"
-    hidden: no
-    sql: MAX(${TABLE}.artist_name) ;;
+  dimension: amount_paid {
+    description: "amount_paid"
+    label: "amount_paid"
+    type: number
+    hidden: yes
+    sql: ${TABLE}.amount_paid ;;
   }
-  dimension: music_name {
-    description: "アーティスト名"
-    label: "アーティスト名"
-    hidden: no
-    sql: MAX(${TABLE}.artist_name) ;;
+  dimension: amount_paid_with_tax {
+    description: "amount_paid_with_tax"
+    label: "amount_paid_with_tax"
+    type: number
+    hidden: yes
+    sql: ${TABLE}.amount_paid_with_tax ;;
   }
-  dimension: file_type_id {
-    description: "ファイルタイプID"
-    label: "ファイルタイプID"
-    hidden: no
-    sql: MAX(${TABLE}.file_type_id) ;;
+  dimension: purchase_unit {
+    description: "purchase_unit"
+    label: "purchase_unit"
+    type: number
+    hidden: yes
+    sql: ${TABLE}.purchase_unit ;;
   }
-  dimension: display_type_id {
-    description: "ディスプレイタイプID"
-    label: "ディスプレイタイプID"
-    hidden: no
-    sql: MAX(${TABLE}.display_type_id) ;;
+  dimension: measure {
+    description: "measure"
+    label: "measure"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.measure ;;
+  }
+  dimension: value {
+    description: "value"
+    label: "value"
+    type: number
+    hidden: yes
+    sql: ${TABLE}.value ;;
+  }
+  dimension: updated_time {
+    description: "updated_time"
+    label: "updated_time"
+    type: date_time
+    hidden: yes
+    sql: ${TABLE}.updated_time ;;
+  }
+  dimension: updated_date {
+    description: "updated_date"
+    label: "updated_date"
+    type: date_time
+    hidden: yes
+    sql: ${TABLE}.updated_date ;;
+  }
+  dimension: data_source {
+    description: "data_source"
+    label: "data_source"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.data_source ;;
+  }
+  dimension: process_date {
+    description: "process_date"
+    label: "process_date"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.process_date ;;
   }
 
 
