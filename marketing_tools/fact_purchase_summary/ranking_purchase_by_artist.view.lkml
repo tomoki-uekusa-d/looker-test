@@ -5,6 +5,13 @@ view: ranking_purchase_by_artist_for_test {
   suggestions: yes
 
   # dimensions
+  dimension: rank_total_ranking {
+    primary_key: yes
+    description: "購入数順位"
+    label: "購入数順位"
+    type: number
+    sql: RANK_UNIQUE(SUM(${total_purchase}))
+  }
   dimension: payment_method_id {
     description: "payment_method_id"
     label: "payment_method_id"
