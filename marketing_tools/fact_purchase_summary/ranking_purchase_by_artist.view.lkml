@@ -1,7 +1,7 @@
 include: "fact_purchase_summary.view.lkml"
 
 view: ranking_purchase_by_artist_for_test {
-  extend: [fact_purchase_summary_for_test]
+  extends: [fact_purchase_summary_for_test]
   suggestions: yes
 
   # dimensions
