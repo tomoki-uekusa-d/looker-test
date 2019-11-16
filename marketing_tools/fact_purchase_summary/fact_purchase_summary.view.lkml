@@ -36,9 +36,9 @@ view: fact_purchase_summary_for_test {
     sql: MAX(${TABLE}.file_type_id) ;;
   }
   dimension: display_type_id {
-    description: "ファイルタイプID"
-    label: "ファイルタイプID"
-    sql: MAX(${TABLE}.file_type_id) ;;
+    description: "ディスプレイタイプID"
+    label: "ディスプレイタイプID"
+    sql: MAX(${TABLE}.display_type_id) ;;
   }
 
 
