@@ -5,18 +5,18 @@ view: fact_purchase_summary_for_test {
   suggestions: yes
 
   # dimensions
-  # dimension: content_id {
-  #   description: "コンテンツID"
+  dimension: content_id {
+    description: "コンテンツID"
+    label: "コンテンツID"
+    type: string
+    sql: MAX(${TABLE}.material_name) ;;
+  }
+  # measure: content_id {
+  #   description: "コンテンツiD"
   #   label: "コンテンツID"
   #   type: string
-  #   sql: ${TABLE}.material_name ;;
+  #   sql: MAX(${TABLE}.material_id) ;;
   # }
-  measure: content_id {
-    description: "コンテンツ名"
-    label: "コンテンツ名"
-    type: string
-    sql: MAX(${TABLE}.material_id) ;;
-  }
 
   #############################################
   # dimension: content_id {
