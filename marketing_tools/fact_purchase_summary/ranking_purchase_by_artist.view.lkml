@@ -99,7 +99,6 @@ view: ranking_purchase_by_artist_for_test {
     sql: ${purchase_point} + ${purchase_payment} ;;
   }
   measure: rank_total_ranking {
-    primary_key: yes
     description: "購入数順位"
     label: "購入数順位"
     type: number
