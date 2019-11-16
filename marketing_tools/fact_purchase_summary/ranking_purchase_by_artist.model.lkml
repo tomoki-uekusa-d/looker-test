@@ -9,7 +9,7 @@ explore: ranking_purchase_by_artist_for_test {
       ${dim_material_for_test.valid_end} IS NULL
       ;;
     type: inner
-    relationship: many_to_many
+    relationship: one_to_one
   }
   join: dim_exp_1 {
     from: dim_expression_for_test
@@ -19,7 +19,7 @@ explore: ranking_purchase_by_artist_for_test {
       ${dim_exp_1.measure} = 'file_type_id' AND
       ${dim_exp_1.property} = 'name'
       ;;
-    relationship: many_to_many
+    relationship: one_to_one
   }
   join: dim_exp_2 {
     from: dim_expression_for_test
@@ -29,7 +29,7 @@ explore: ranking_purchase_by_artist_for_test {
       ${dim_exp_2.measure} = 'site' AND
       ${dim_exp_2.property} = 'name'
       ;;
-    relationship: many_to_many
+    relationship: one_to_one
   }
   join: dim_exp_3 {
     from: dim_expression_for_test
@@ -39,7 +39,7 @@ explore: ranking_purchase_by_artist_for_test {
       ${dim_exp_3.measure} = 'site' AND
       ${dim_exp_3.property} = 'category'
       ;;
-    relationship: many_to_many
+    relationship: one_to_one
   }
   join: dim_exp_4 {
     from: dim_expression_for_test
@@ -49,7 +49,7 @@ explore: ranking_purchase_by_artist_for_test {
       ${dim_exp_4.measure} = 'payment_method_id' AND
       ${dim_exp_4.property} = 'name'
       ;;
-    relationship: many_to_many
+    relationship: one_to_one
   }
 }
 explore: fact_purchase_summary_for_test {}
