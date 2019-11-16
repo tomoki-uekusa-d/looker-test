@@ -8,7 +8,7 @@ view: fact_purchase_summary_for_test {
   dimension: content_id {
     description: "コンテンツID"
     label: "コンテンツID"
-    sql: ${TABLE}.content_id ;;
+    sql: ${TABLE}.material_id ;;
   }
   dimension: content_name {
     description: "コンテンツ名"
