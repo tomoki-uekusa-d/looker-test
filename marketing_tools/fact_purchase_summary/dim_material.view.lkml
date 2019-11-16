@@ -78,7 +78,7 @@ view: dim_material_for_test {
   }
   dimension: charge_term {
     description: "charge_term"
-    label: "charge_term ※詳細不明"
+    label: "charge_term"
     type: number
     sql: ${TABLE}.charge_term ;;
   }
