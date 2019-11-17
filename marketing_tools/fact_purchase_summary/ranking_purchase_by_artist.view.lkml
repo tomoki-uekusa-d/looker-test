@@ -86,7 +86,7 @@ view: ranking_purchase_by_artist_for_test {
     label: "売上[ポイント消費]"
     type: sum
     # sql: CASE WHEN ${TABLE}.measure = 'purchase_sales[payment]' THEN ${TABLE}.value ELSE 0 END ;;
-    sql: ${TABLE}.measure
+    sql: ${TABLE}.measure ;;
     filters: {
       field: measure
       value: "purchase[point]"
@@ -97,7 +97,7 @@ view: ranking_purchase_by_artist_for_test {
     label: "購入数[個別課金]"
     type: sum
     # sql: CASE WHEN ${TABLE}.measure = 'purchase[payment]' THEN ${TABLE}.value ELSE 0 END ;;
-    sql: ${TABLE}.measure
+    sql: ${TABLE}.measure ;;
     filters: {
       field: measure
       value: "purchase[payment]"
