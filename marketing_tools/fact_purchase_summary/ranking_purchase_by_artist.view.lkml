@@ -66,6 +66,7 @@ view: ranking_purchase_by_artist_for_test {
   dimension_group: process_date {
     description: "対象年月日"
     label: "対象年月日"
+    hidden: no
     type: time
     timeframes: [date]
     sql: date_parse(${TABLE}.process_date,'%Y-%m-%d') ;;
