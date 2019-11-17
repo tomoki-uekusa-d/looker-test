@@ -106,7 +106,7 @@ view: ranking_purchase_by_artist_for_test {
     description: "購入数[ポイント消費]"
     label: "購入数[ポイント消費]"
     # type: sum
-    sql: CASE WHEN ${TABLE}.measure = 'purchase[point]' THEN ${TABLE}.value ELSE 0 END ;;
+    sql: SUM(CASE WHEN ${TABLE}.measure = 'purchase[point]' THEN ${TABLE}.value ELSE 0 END) ;;
     # sql: ${TABLE}.measure ;;
     # filters: {
     #   field: measure
