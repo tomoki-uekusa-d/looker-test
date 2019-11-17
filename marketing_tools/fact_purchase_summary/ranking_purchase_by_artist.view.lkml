@@ -5,6 +5,13 @@ view: ranking_purchase_by_artist_for_test {
   suggestions: yes
 
   # dimensions
+  dimension: rank_total_ranking {
+    description: "購入数順位"
+    label: "購入数順位"
+    type: number
+    sql: ROW_NUMBER() OVER(ORDER BY ${total_purchase} DESC) ;;
+  }
+
   dimension: content_id {
     primary_key: yes
   }
@@ -118,12 +125,6 @@ view: ranking_purchase_by_artist_for_test {
     label: "購入数"
     type: number
     sql: ${purchase_point} + ${purchase_payment} ;;
-  }
-  measure: rank_total_ranking {
-    description: "購入数順位"
-    label: "購入数順位"
-    type: number
-    sql: ROW_NUMBER() OVER(ORDER BY ${total_purchase} DESC) ;;
   }
   #############################################
   # measure: total_sells {
