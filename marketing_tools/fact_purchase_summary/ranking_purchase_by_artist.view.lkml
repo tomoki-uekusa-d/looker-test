@@ -5,6 +5,9 @@ view: ranking_purchase_by_artist_for_test {
   suggestions: yes
 
   # dimensions
+  dimension: content_id {
+    primary_key: yes
+  }
   dimension: payment_method_id {
     description: "payment_method_id"
     label: "payment_method_id"
