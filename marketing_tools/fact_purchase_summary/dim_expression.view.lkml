@@ -1,21 +1,42 @@
 view: dim_expression_for_test {
-  sql_table_name: tableau_tool.fact_purchase_summary ;;
+  sql_table_name: tableau_tool.dim_expression ;;
 
   suggestions: yes
 
   # dimensins
-  # dimension: content_id {
-  #   description: "コンテンツID"
-  #   label: "コンテンツID"
-  #   type: string
-  #   sql: ${TABLE}.content_id ;;
-  # }
-
-  # measures
-  # measure: total_sells {
-  #   description: "購入数"
-  #   label: "購入数"
-  #   type: number
-  #   sql: ${sells_point} + ${sells_payment} ;;
-  # }
+  dimension: measure {
+    description: "measure"
+    label: "measure"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.measure ;;
+  }
+  dimension: property {
+    description: "property"
+    label: "property"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.property ;;
+  }
+  dimension: key {
+    description: "key"
+    label: "key"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.key ;;
+  }
+  dimension: value {
+    description: "value"
+    label: "value"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.value ;;
+  }
+  dimension: project {
+    description: "project"
+    label: "project"
+    type: string
+    hidden: yes
+    sql: ${TABLE}.project ;;
+  }
 }
