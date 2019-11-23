@@ -3,7 +3,7 @@ connection: "athena_datalake"
 include: "*.view.lkml"
 include: "../../tableau_tool/*.view.lkml"
 
-explore: ranking_of_purchase_by_material {
+explore: ranking_of_purchase_by_material_uekusa {
   label: "素材別購入ランキング"
   description: "素材別購入ランキング"
   join: dim_material {
