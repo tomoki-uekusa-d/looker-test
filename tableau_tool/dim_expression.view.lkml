@@ -1,4 +1,4 @@
-view: dim_expression_for_test {
+view: dim_expression {
   sql_table_name: tableau_tool.dim_expression ;;
 
   suggestions: yes

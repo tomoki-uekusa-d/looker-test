@@ -1,4 +1,4 @@
-view: dim_material_for_test {
+view: dim_material {
   sql_table_name: tableau_tool.dim_material ;;
 
   suggestions: no
@@ -54,35 +54,35 @@ view: dim_material_for_test {
     sql: ${TABLE}.artist_name ;;
   }
   dimension: ad_copy {
-    description: "ad_copy ※詳細不明"
+    description: "ad_copy"
     label: "ad_copy"
     type: string
     hidden: yes
     sql: ${TABLE}.ad_copy ;;
   }
   dimension: file_type_id {
-    description: "file_type_id ※詳細不明"
+    description: "file_type_id"
     label: "file_type_id"
     type: string
     hidden: yes
     sql: ${TABLE}.file_type_id ;;
   }
   dimension: display_type_id {
-    description: "display_type_id ※詳細不明"
+    description: "display_type_id"
     label: "display_type_id"
     type: string
     hidden: yes
     sql: ${TABLE}.display_type_id ;;
   }
   dimension: arrangeable {
-    description: "arrangeable ※詳細不明"
+    description: "arrangeable"
     label: "arrangeable"
     type: number
     hidden: yes
     sql: ${TABLE}.arrangeable ;;
   }
   dimension: is_sample_enable {
-    description: "is_sample_enable ※詳細不明"
+    description: "is_sample_enable"
     label: "is_sample_enable"
     type: number
     hidden: yes
@@ -96,7 +96,7 @@ view: dim_material_for_test {
     sql: ${TABLE}.charge_term ;;
   }
   dimension: charge_term_unit {
-    description: "charge_term_unit ※詳細不明"
+    description: "charge_term_unit"
     label: "charge_term_unit"
     type: number
     hidden: yes
@@ -130,12 +130,4 @@ view: dim_material_for_test {
     hidden: yes
     sql: ${TABLE}.valid_end ;;
   }
-
-  # measures
-  # measure: total_sells {
-  #   description: "購入数"
-  #   label: "購入数"
-  #   type: number
-  #   sql: ${sells_point} + ${sells_payment} ;;
-  # }
 }
