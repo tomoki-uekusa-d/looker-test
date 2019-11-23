@@ -5,8 +5,7 @@ view: ranking_of_first_purchase_by_material_uekusa {
   suggestions: yes
 
   # dimensions
-  dimension: content_id {
-    primary_key: yes
-  }
+  dimension: content_id { primary_key: yes }
+
   # measures
 }
