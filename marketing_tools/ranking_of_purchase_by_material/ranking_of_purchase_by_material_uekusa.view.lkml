@@ -2,6 +2,9 @@ include: "../../tableau_tool/fact_purchase_summary.view.lkml"
 
 view: ranking_of_purchase_by_material_uekusa {
   extends: [fact_purchase_summary]
+  view_name: ranking_of_purchase_by_material_uekusa
+  view_label: "ranking_of_purchase_by_material_uekusa"
+
   suggestions: yes
 
   # dimensions
