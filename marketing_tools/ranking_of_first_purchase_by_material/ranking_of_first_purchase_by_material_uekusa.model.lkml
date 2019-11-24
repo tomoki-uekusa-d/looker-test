@@ -2,7 +2,7 @@ connection: "athena_datalake"
 
 include: "*.view.lkml"
 include: "../../tableau_tool/*.view.lkml"
-include: "../ranking_of_purchase_by_material/*.lkml"
+# include: "../ranking_of_purchase_by_material/*.lkml"
 
 explore: ranking_of_first_purchase_by_material_uekusa {
   # TODO: extends from ranking_of_purchase_by_material_uekusa
