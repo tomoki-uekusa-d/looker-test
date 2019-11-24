@@ -93,10 +93,9 @@ view: fact_purchase_summary {
     type: string
     sql: ${TABLE}.data_source ;;
   }
-  dimension: process_date {
+  dimension_group: process_date {
     description: "process_date"
     label: "process_date"
-    type: string
     hidden: yes
     type: time
     timeframes: [date, year, month, week]
