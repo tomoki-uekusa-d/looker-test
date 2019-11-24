@@ -98,6 +98,8 @@ view: fact_purchase_summary {
     label: "process_date"
     type: string
     hidden: yes
+    type: time
+    timeframes: [date, year, month, week]
     sql: ${TABLE}.process_date ;;
   }
 }
