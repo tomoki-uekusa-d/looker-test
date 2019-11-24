@@ -1,5 +1,3 @@
-connection: "athena_datalake"
-
 include: "*.view.lkml"
 include: "../../tableau_tool/*.view.lkml"
 include: "../ranking_of_purchase_by_material/*.lkml"

@@ -6,6 +6,9 @@ include: "../../tableau_tool/*.view.lkml"
 explore: ranking_of_purchase_by_material_uekusa {
   label: "素材別購入ランキング"
   description: "素材別購入ランキング"
+  view_name: "ranking_of_purchase_by_material_uekusa"
+  view_label: "ranking_of_purchase_by_material_uekusa"
+
   join: dim_material {
     sql_on:
       ${ranking_of_purchase_by_material_uekusa.content_id} = CAST(${dim_material.material_id} AS VARCHAR) AND
