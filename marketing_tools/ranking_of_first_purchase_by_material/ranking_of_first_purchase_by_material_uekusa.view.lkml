@@ -84,7 +84,7 @@ view: ranking_of_first_purchase_by_material_uekusa {
     label: "対象年月日"
     hidden: no
     type: time
-    timeframes: [date, year, month, day]
+    timeframes: [date, year, month, week]
     sql: date_parse(${TABLE}.process_date,'%Y-%m-%d') ;;
   }
 
