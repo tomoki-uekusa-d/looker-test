@@ -1,7 +1,7 @@
-include: "../../tableau_tool/fact_purchase_summary.view.lkml"
+include: "../ranking_of_purchase_by_material/ranking_of_purchase_by_material_uekusa.view.lkml"
 
 view: ranking_of_first_purchase_by_material_uekusa {
-  extends: [fact_purchase_summary]
+  extends: [ranking_of_purchase_by_material_uekusa]
 
   suggestions: yes
   dimension_group: process_date {
