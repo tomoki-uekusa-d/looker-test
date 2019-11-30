@@ -87,6 +87,12 @@ view: ranking_of_purchase_by_material_uekusa {
     timeframes: [date]
     sql: date_parse(${TABLE}.process_date,'%Y-%m-%d') ;;
   }
+  dimension rank_of_first_purchase_within_1_day_after_subscription_test :{
+    description: "期間入会後初回購入数順位(テスト)"
+    label: "期間入会後初回購入数順位(テスト)"
+    sql: ${rank_of_first_purchase_within_1_day_after_subscription_test} ;;
+  }
+
   # measures
   measure: first_purchase_within_1_day_after_subscription {
     description: "入会後初回購入[24時間以内]"
